@@ -16,8 +16,6 @@ public class TxtReader extends FlatFileItemReader<Person> {
         this.setLinesToSkip(1);
         this.setLineMapper(lineMapper());
     }
-
-    @Bean
     public LineMapper<Person> lineMapper() {
         DefaultLineMapper<Person> defaultLineMapper = new DefaultLineMapper<>();
         DelimitedLineTokenizer lineTokenizer = new DelimitedLineTokenizer();
